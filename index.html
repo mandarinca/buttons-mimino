@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
+  <main>
   <body class="background">
     <div>
   
@@ -24,7 +25,7 @@
         impedit, praesentium dolorem est eos hic itaque labore expedita, voluptatibus ea suscipit! Officia, amet. Lorem ipsum dolor sit, amet consectetur
          adipisicing elit. Explicabo, dignissimos. Aliquid veritatis error necessitatibus provident dolorem aperiam suscipit quam sint modi fuga corporis quaerat, in at minima, laudantium sapiente quis.</p>
        
-     <button type="button" class="btn button-grey">Забронювати столик
+     <!-- <button type="button" class="btn button-grey">Забронювати столик
     </button>
 
     <button type="button" class="btn button-grey">Забронювати номер
@@ -46,27 +47,98 @@
     </button>
 
     <button type="submit" class="btn-big button-big-black">ОФОРМИТИ БРОНЮВАННЯ
-    </button>
+    </button> -->
     
  <!------- BUTTONS-for-MODALS-of-DESKTOP-and-TABLET--------->
 
- <button type="submit" class="btn-big button-modal-desk-tab">ОФОРМИТИ БРОНЮВАННЯ
-</button>
+ <!-- <button type="submit" class="btn-big button-modal-desk-tab">ОФОРМИТИ БРОНЮВАННЯ
+</button> -->
 
 <!------- BUTTONS-for-MOBILE--------->
-
-<button type="submit" class="btn-mob button-mobile-circle">ОФОРМИТИ БРОНЮВАННЯ
-</button>
-
-<button type="submit" class="btn-mob button-mobile-quadro">ОФОРМИТИ БРОНЮВАННЯ
-</button>
- </div>
-<a href="#">Повернутися до перегляду номерів<span>
-    <svg class="arrow-right" width="23" height="13">
+<!-- <a href="#">Повернутися до перегляду номерів<span> -->
+    <!-- <svg class="arrow-right" width="23" height="13">
         <use href="/sprite.svg#arrow-right"></use>
     </svg>
 </span> </a>
 
-    </body>
+<button type="submit" class="btn-mob button-mobile-circle">ОФОРМИТИ БРОНЮВАННЯ
+</button> -->
 
+<button type="button" class="btn-mob button-mobile-quadro" data-modal-open>ОФОРМИТИ БРОНЮВАННЯ
+</button>
+ </div>
+</main>
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+     <button type="button" class="mod-close-btn" data-modal-close>
+      <svg class="cross-close" width="18" height="18">
+        <use href="/sprite.svg#btn-close"></use> 
+      </svg>
+    </button>
+    
+    <h3 class="mod-price-title">ЦІНИ НА НОМЕР</h3>
+
+    <p class="mod-two-place-lux">Двомісний люкс</p>
+    <p class="mod-item mod-category_of_number">Категорія номеру</p>
+
+   <form class="mod-price-form"> 
+<div class="mod-price-wrapper mod-list">
+  
+  <!-- <form action="formdata" method="post" name="form_nights" class="mod-form-input"> -->
+    <select name="list" class="mod-form-input">
+     <option></option>
+     <option value="1">1</option>
+     <option value="2">2</option>
+     <option value="3">3</option>
+    </select>
+    <span class="mod-item">Кількість ночей</span>
+   <!-- </form> -->
+   
+
+      <!-- <label for="number_of_nights" class="mod-form-field nights">
+
+          <input type="number" 
+          id="number_of_nights"
+          class="mod-form-input" 
+          name="number_of_nights" 
+          min="10"
+          max="20"
+          placeholder="1"
+          required>
+          
+
+<span class="mod-item">Кількість ночей</span>
+
+      </label> -->
+    </div>
+    
+    <div class="mod-price-wrapper">
+      <label for="price" class="mod-form-field cost">
+
+        <input type="number" 
+        id="price"
+        class="mod-form-input" 
+        name="price" 
+        min="1"
+        max="1000000"
+        placeholder="1000"
+        required>
+
+        <span class="mod-item grn">грн</span>
+
+      </label>
+     
+    </div>
+     </form>
+
+
+<button type="button" class="btn-mob mod-btn-order-number">ЗАБРОНЮВАТИ НОМЕР
+</button>
+
+  </div> 
+</div>
+<script src="./modal.js"></script>
+
+    </body>
+  
   </html>
